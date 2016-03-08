@@ -242,7 +242,7 @@
   <br>
   <div class="row">
     <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
+      <p class="text-center"><strong>Titan X</strong></p><br>
       <a href="#demo" data-toggle="collapse">
         <img src="idk yet.jpg" class="img-circle person" alt="Some Product Idk Yet" width="255" height="255">
       </a>
@@ -252,7 +252,7 @@
       </div>
     </div>
     <div class="col-sm-4">
-      <p class="text-center"><strong>Name</strong></p><br>
+      <p class="text-center"><strong></strong></p><br>
       <a href="#demo2" data-toggle="collapse">
         <img src="productOne.jpg" class="img-circle person" alt="Product  Two" width="255" height="255">
       </a>
@@ -290,7 +290,7 @@
     <div class="row text-center">
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="Well.jpg" alt="No img yet still working..." width="400" height="300">
+          
           <p><strong>Proceed to checkout</strong></p>
           <p>Our </p>
           <button class="btn" data-toggle="modal" data-target="#myModal">Procced to Checkout</button>

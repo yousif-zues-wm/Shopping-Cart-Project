@@ -12,15 +12,12 @@
   $from = 'elmer@makemeelvis.com';
   $subject = $_POST['subject'];
   $text = $_POST['elvismail'];
-​
-  $dbc = PDO('data.makemeelvis.com', 'elmer', 'theking', 'elvis_store')
-    or die('Error connecting to MySQL server.');
-​
-  $query = "SELECT * FROM email_list";
-  $result = PDO($dbc, $query)
-    or die('Error querying database.');
-​
-  foreach  ($row = $db->fetch_array$result)){
+$dbh = new PDO('mysql:host=localhost;dbname=elvis_store', 'root', 'root');
+$query = "SELECT * FROM email_list";
+$stmt = $dbh->prepare($query);
+$stmt->execute();
+$result= $stmt->fetchAll();
+ foreach($result as $row) {
     $to = $row['email'];
     $first_name = $row['first_name'];
     $last_name = $row['last_name'];
@@ -28,8 +25,6 @@
     mail($to, $subject, $msg, 'From:' . $from);
     echo 'Email sent to: ' . $to . '<br />';
   } 
-​
-  PDO($dbc);
 ?>
 ​
 </body>

@@ -1,15 +1,4 @@
-<?php
-try {
-    $dbh = new PDO('mysql:host=localhost;dbname=test', $user, $pass);
-    foreach($dbh->query('SELECT * from FOO') as $row) {
-        print_r($row);
-    }
-    $dbh = null;
-} catch (PDOException $e) {
-    print "Error!: " . $e->getMessage() . "<br/>";
-    die();
-}
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -162,8 +151,53 @@ try {
       resize: none;
   }
 
+
+  #dropOne{
+    position: absolute;
+    top:-.5%;
+    left:205%;
+
+
+
+  }
+
+  #dropTwo{
+    position: absolute;
+    top:-.5%;
+    left:105%;
+
+
+
+
+  }
+
+   #dropThree{
+    position: absolute;
+    top:100%;
+    left:105%;
+
+  }
+ 
+
+
+  #band{
+
+
+
+
+  }
+
   
   </style>
+  <script>
+ $(document).ready(
+    function(){
+        $("#Titan_XB").click(function () {
+            $("#Titan_XCA").show("slow");
+        });
+
+    });
+  </script>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -200,32 +234,7 @@ try {
 
 
  
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img src="img.jpg\" alt="Some img, idk Yet" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>Titan X</h3>
-          <p>Titan X graphics card</p>
-        </div>      
-      </div>
-
-      <div class="item">
-        <img src="" alt="Some Img idk yet" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>Liquid Cooling system</h3>
-          <p> Note to self put a liquid cooling system on sale</p>
-        </div>      
-      </div>
-    
-      <div class="item">
-        <img src="WOW.jpg" alt="Prefect Text" width="1200" height="700">
-        <div class="carousel-caption">
-          <h3>Lower Nividia Graphics Card</h3>
-          <p>Include a cheaper version of the titan X </p>
-        </div>      
-      </div>
-    </div>
-
+  
  
     
 </div>
@@ -247,7 +256,7 @@ try {
       <div id="demo6" class="collapse">
         <p>Titan X</p>
         <p>GPU</p>
-        <button onclick="document.getElementById('Titan X').id = 'Titan XC'; return false" class="btn btn-default" class=btn btn-default>$1,399</button>
+        <button id="Titan_XB" onclick="" class="btn btn-default" class=btn btn-default>$1,399</button>
       </div>
     </div>
     <div class="col-sm-4">
@@ -258,14 +267,14 @@ try {
       <div id="demo7" class="collapse">
         <p>EVGA</p>
         <p>660Ti GTX </p>
-        <button class='btn btn-inverse'>$230</button>
+        <button id="button2" class='btn btn-inverse'>$230</button>
       </div>
     </div>
   <div class="row">
     <div class="col-sm-4">
       <p class="text-center"><strong>Name</strong></p><br>
       <a href="#demo5" data-toggle="collapse">
-        <img src="idk yet.jpg" class="img-square product" alt="Some Product Idk Yet" width="255" height="255">
+        <img src="idk yet.jpg" class="http://images10.newegg.com/ProductImageCompressAll200/A4FT_1_20150602428677115.jpg" alt="Some Product Idk Yet" width="255" height="255">
       </a>
       <br />
       <div id="demo5" class="collapse">
@@ -313,6 +322,60 @@ try {
         <p>about this product</p>
       </div>
     </div>
+    <div id="GTX 980" class="col-sm-4">
+      <p class="text-center"><strong>Name</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="http://cdn.shopify.com/s/files/1/0378/4593/products/gtx980_1_600.jpg?v=1420980582" class="img-square product" alt="Product Four" width="255" height="255">
+      </a>
+
+
+      <div id="demo" class="collapse">
+        <p>GTX 980</p>
+        <p>GPU</p>
+        <button onclick="document.getElementById('GTX 980').id = 'GTX 980C'; return false" class="btn btn-default">$549</button>
+      </div>
+
+       <div id="dropOne" class="col-sm-4">
+      <p class="text-center"><strong>Name</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="Oriduct Three.jpg" class="img-square product" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>More </p>
+        <p>information</p>
+        <p>about this product</p>
+      </div>
+    </div>
+
+         <div id="dropTwo" class="col-sm-4">
+      <p class="text-center"><strong>Name</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="Oriduct Three.jpg" class="img-square product" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>More </p>
+        <p>information</p>
+        <p>about this product</p>
+      </div>
+    </div>
+
+
+         <div id="dropThree" class="col-sm-4">
+      <p class="text-center"><strong>Name</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="Oriduct Three.jpg" class="img-square product" alt="Random Name" width="255" height="255">
+      </a>
+      <div id="demo3" class="collapse">
+        <p>More </p>
+        <p>information</p>
+        <p>about this product</p>
+      </div>
+    </div>
+
+
+
+
+
   </div>
 </div>
 
@@ -330,30 +393,31 @@ try {
     <div class="row text-center">
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="Well.jpg" alt="No img yet still working..." width="400" height="300">
           <p><strong>Proceed to checkout</strong></p>
-          <p>Our </p>
+          <p>Finialize Purchase </p>
           <button class="btn" data-toggle="modal" data-target="#myModal">Procced to Checkout</button>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="None.jpg" alt="Nothing Here" width="400" height="300">
           <p><strong>Proceed to checkout</strong></p>
-          <p>Subscribe for only $25 a month and recieve free shipping and haldling on every purchase!!!</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">Subscribe</button>
+          <p>Proceed to Checkout</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Proceed to Checkout</button>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="thumbnail">
-          <img src="Yet.jpg" alt="Nothing Here" width="400" height="300">
           <p><strong>Proceed to checkout</strong></p>
           <p>Complete Purhase</p>
-          <button class="btn" data-toggle="modal" data-target="#myModal">See More</button>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Proceed to Checkout</button>
         </div>
       </div>
     </div>
   </div>
+
+
+
+
   
 
   <div class="modal fade" id="myModal" role="dialog">
@@ -363,18 +427,39 @@ try {
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">×</button>
-          <h4><span class="glyphicon glyphicon-lock"></span> Subscription</h4>
+          <h4><span class="glyphicon glyphicon-lock"></span> Checkout</h4>
         </div>
         <div class="modal-body">
           <form role="form">
             <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Subscribe for only $25 a month an recieve free shipping on every purchase!</label>
-              <input type="number" class="form-control" id="psw" placeholder="How many months?">
+              <label for="psw"><span class="glyphicon glyphicon-credit-card"></span> Enter Your Credit Card No.</label>
+              <input type="number" class="form-control" id="psw" placeholder="Credit Card No.">
+               <label for="psw"><span class="glyphicon glyphicon-tasks"></span> Enter Your CVC</label>
+              <input type="number" class="form-control" id="psw" placeholder="CVC">
+               <label for="psw"><span class="glyphicon glyphicon-calendar"></span> Enter Your Credit Card Expiration Date</label>
+              <input type="number" class="form-control" id="psw" placeholder="Credit Card Expiration Date">
+            </div>
+            <div class="form-group">
+
             </div>
             <div class="form-group">
               <label for="usrname"><span class="glyphicon glyphicon-user"></span> Email</label>
               <input type="text" class="form-control" id="usrname" placeholder="Enter email">
             </div>
+            <div id="cart">
+
+              <div id="Titan_XCA" style="display:none;" class="col-sm-4">
+      <p class="text-center"><strong>Titan X </strong></p><br>
+        <img src="http://www.techpowerup.com/img/15-03-17/81b.jpg" class="img-square product" alt="Product Four" width="100" height="100">
+      <p class="text-center"><strong>$1,399</strong></p>
+
+
+
+    </div>
+
+
+  
+
               <button type="submit" class="btn btn-block">Pay 
                 <span class="glyphicon glyphicon-ok"></span>
               </button>
@@ -390,7 +475,7 @@ try {
     </div>
   </div>>
 
-</div
+</div>
 
 <div id="contact" class="container">
   <h3 class="text-center">Contact</h3>
@@ -422,17 +507,18 @@ try {
     </div>
   </div>
   <br>
-  <h3 class="text-center">Featured Products</h3>  
-  <ul class="nav nav-tabs">
+  <h3 style="background-color:white;" class="text-center">Featured Products</h3>  
+  <ul  class="nav nav-tabs">
     <li class="active"><a data-toggle="tab" href="#home">Titan X</a></li>
-    <li><a data-toggle="tab" href="#menu1">Nividea Shield</a></li>
-    <li><a data-toggle="tab" href="#menu2">Liquid Cooling system</a></li>
+    <li><a data-toggle="tab" href="#menu1">EVGA GEFORCE 980 </a></li>
+    <li><a data-toggle="tab" href="#menu2">EVGA GEFORCE 660 TI</a></li>
   </ul>
 
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
       <h2>The Titan X</h2>
-      <p>The Titan x graphics card has XYZ</p>
+      <p>The Titan x graphics card is on sale at $1,399!!</p>
+     <img width="250" height="250" src="81b.png" />
     </div>
     <div id="menu1" class="tab-pane fade">
       <h2>The Nividea Shield</h2>
@@ -449,62 +535,7 @@ try {
 
 
 <script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-var myCenter = new google.maps.LatLng(41.878114, -87.629798);
 
-function initialize() {
-var mapProp = {
-center:myCenter,
-zoom:12,
-scrollwheel:false,
-draggable:false,
-mapTypeId:google.maps.MapTypeId.ROADMAP
-};
-
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-var marker = new google.maps.Marker({
-position:myCenter,
-});
-
-marker.setMap(map);
-}
-
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
-
-<footer class="text-center">
-  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a><br><br>
-  <p>Copyright && Zeus Yousif 2016</p> 
-</footer>
-
-<script>
-$(document).ready(function(){
-
-  $('[data-toggle="tooltip"]').tooltip(); 
-  
-  
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-
-    
-    event.preventDefault();
-
-   
-    var hash = this.hash;
-
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 900, function(){
-   
-
-      window.location.hash = hash;
-    });
-  });
-})
-</script>
 
 </body>
 </html>
